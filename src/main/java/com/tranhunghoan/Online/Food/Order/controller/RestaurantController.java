@@ -53,7 +53,7 @@ public class RestaurantController {
             ) throws Exception {
         User user = userService.findUserByJwtToken(jwt);
 
-        Restaurant restaurant = restaurantService.getRestaurantById(id);
+        Restaurant restaurant = restaurantService.getRestaurantByUserId(id);
         return new ResponseEntity<>(restaurant, HttpStatus.OK);
     }
 
